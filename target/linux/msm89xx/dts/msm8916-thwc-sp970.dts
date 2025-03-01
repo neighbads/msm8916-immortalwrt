@@ -8,6 +8,25 @@
 	model = "ufi-sp970 4G Modem Stick";
 	compatible = "thwc,sp970", "qcom,msm8916";
 
+	leds: leds {
+		esim_sel {
+			label = "esim:sel";
+			gpios = <&msmgpio 26 GPIO_ACTIVE_HIGH>;
+			default-state = "off";
+		};
+
+		rsim_sel {
+			label = "rsim:sel";
+			gpios = <&msmgpio 27 GPIO_ACTIVE_HIGH>;
+			default-state = "off";
+		};
+
+		sim_switch {
+			label = "sim:switch";
+			gpios = <&msmgpio 120 GPIO_ACTIVE_HIGH>;
+			default-state = "off";
+		};
+	};
 };
 
 &button_restart {
